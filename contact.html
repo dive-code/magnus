@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Magnus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px;
+      background: #000;
+      text-align: center;
+    }
+    nav a {
+      color: orange;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #222;
+      border-radius: 8px;
+    }
+    h1 {
+      color: orange;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin: 10px 0;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px;
+      background: orange;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background: #ff6600;
+    }
+    footer {
+      background: #000;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="coupon.html">Coupons</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Contact Us</h1>
+    <p>Have questions? Reach out to Magnus and our team will get back to you quickly.</p>
+    <form action="https://formspree.io/f/mayvlzbd" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Magnus Wealth. All rights reserved.</p>
+  </footer>
+</body>
+</html>
