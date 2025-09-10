@@ -3,108 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnus – Welcome</title>
+  <title>Welcome to Magnus</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
-      color: #fff;
-      text-align: center;
-      line-height: 1.6;
     }
-
     header {
       padding: 20px;
+      background: #000;
+      text-align: center;
     }
-
-    header img {
-      width: 150px;
-      border-radius: 10px;
+    nav {
+      margin-top: 10px;
     }
-
-    .hero {
-      padding: 20px;
-    }
-
-    .hero img {
-      width: 80%;
-      max-width: 420px;
-      border-radius: 12px;
-      margin: 15px 0;
-    }
-
-    h1 {
-      color: #ff6a00;
-      font-size: 2.2em;
-      margin: 20px 0 10px;
-    }
-
-    p {
-      font-size: 1.15em;
-      color: #ccc;
-      margin-bottom: 15px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .highlight {
-      color: #ff6a00;
+    nav a {
+      color: orange;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
     }
-
-    .cta a {
-      display: inline-block;
-      padding: 14px 30px;
-      background: #ff6a00;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      border-radius: 8px;
-      transition: 0.3s ease;
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    .cta a:hover {
-      background: #e65c00;
+    img {
+      max-width: 250px;
+      margin: 15px auto;
+      display: block;
+    }
+    h1 {
+      color: orange;
+      text-align: center;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: orange;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      background: #ff6600;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .feature-box {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      margin: 10px;
+    }
+    footer {
+      background: #000;
+      padding: 15px;
+      text-align: center;
+      margin-top: 40px;
+      color: gray;
+    }
+    footer a {
+      color: orange;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="magnus1.jpeg" alt="Magnus Logo">
+    <!-- Logo -->
+    <img src="images/magnus-logo.png" alt="Magnus Logo">
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="coupon.html">Coupons</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <div class="hero">
-    <img src="magnus2.jpeg" alt="Magnus Wealth Illustration">
-  </div>
+  <!-- Hero Illustration -->
+  <img src="images/magnus-illustration.png" alt="Magnus Wealth Illustration">
 
-  <h1>Welcome to Magnus</h1>
+  <section>
+    <h1>Welcome to Magnus</h1>
+    <p><strong>Magnus</strong> is your trusted partner in financial growth.  
+    We believe wealth creation is not about luck — it’s about making the right decisions, consistently.  
+    Start your journey with us today and unlock a future of financial freedom.</p>
+    <!-- Call to Action -->
+    <a href="register.html" class="btn">Register Now</a>
+  </section>
 
-  <p>
-    <span class="highlight">Magnus</span> is your trusted partner in financial growth.  
-    We believe wealth creation is not about luck — it’s about making smart moves, consistently.  
-  </p>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>📈 Smart Investments</h3>
+      <p>Guided strategies to grow your wealth with confidence.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🤝 Trusted Experts</h3>
+      <p>Our team has years of experience in financial markets.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🔒 Secure Growth</h3>
+      <p>Your success and security are our top priorities.</p>
+    </div>
+  </section>
 
-  <p>
-    ✅ <span class="highlight">Get started in minutes</span>, earn rewards for years.  
-    <br>✅ Money works best when it works for you.  
-    <br>✅ Every successful journey begins with one bold decision.  
-  </p>
-
-  <p>
-    <em>“The secret of getting ahead is getting started.”</em>  
-    <br> At Magnus, we help you take that first step toward building a life of freedom, stability, and abundance.  
-  </p>
-
-  <p>
-    🚀 Join thousands of achievers who are already turning their dreams into reality.  
-    <br> 💡 Your time is now — tomorrow is built by what you do today.  
-  </p>
-
-  <div class="cta">
-    <a href="index.html">Register Now</a>
-  </div>
+  <footer>
+    <p>© 2025 Magnus Wealth. All rights reserved.</p>
+    <p>Follow us on 
+      <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Facebook</a>
+    </p>
+  </footer>
 </body>
 </html>
