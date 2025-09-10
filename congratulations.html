@@ -1,72 +1,31 @@
 <!DOCTYPE html>
+<h<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Congratulations</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Congratulations — Magnus</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff6f00, #ff9800);
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 40px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 18px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 25px;
-      background: #25d366; /* WhatsApp green */
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #1ebe57;
-    }
-    .back-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #ff9800;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .back-btn:hover {
-      background: #e68900;
-    }
+    html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#fff;}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;}
+    .card{width:100%;max-width:560px;background:#fff;color:#222;padding:28px;border-radius:12px;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,0.35);}
+    h1{color:#ff6a00;margin:0 0 8px;}
+    p{color:#444;margin:0 0 18px;}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:800;margin:6px;}
+    .btn.green{background:#25d366;color:#07110b;}
+    .btn.orange{background:#ff6a00;color:#fff;}
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🎉 Congratulations!</h1>
-    <p>You have successfully signed up for <strong>Magnus</strong>.</p>
-    <p>Click below to join our exclusive WhatsApp group 👇</p>
-    
-    <!-- WhatsApp Group Link -->
-    <a href="https://chat.whatsapp.com/LgjJCZO0k1SCEe89NmJ7MX" target="_blank" class="btn">Join WhatsApp Group</a>
-    
-    <!-- Back to home -->
-    <br>
-    <a href="index.html" class="back-btn">Go Back to Home</a>
+  <div class="wrap">
+    <div class="card">
+      <h1>🎉 Congratulations!</h1>
+      <p>Your registration was successful. Welcome to <strong>Magnus</strong> — your trusted source for wealth creation.</p>
+      <div>
+        <a class="btn green" href="https://chat.whatsapp.com/LgjJCZO0k1SCEe89NmJ7MX" target="_blank" rel="noopener">Join WhatsApp Group</a>
+        <a class="btn orange" href="index.html">Back to Home</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
