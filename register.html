@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magnus - Sign Up</title>
+  <style>
+    :root{
+      /* Brand palette: deep black + bright orange */
+      --bg-dark-1:#0b0b0b;
+      --bg-dark-2:#1a1a1a;
+      --brand:#ff6a00;    /* bright orange */
+      --brand-strong:#e65c00;
+      --card:#ffffff;
+      --text:#111;
+    }
+
+    /* Background: black base with an orange glow */
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:
+        radial-gradient(90rem 35rem at 85% 10%, rgba(255,106,0,0.18), rgba(0,0,0,0) 60%),
+        linear-gradient(135deg, var(--bg-dark-1) 0%, var(--bg-dark-2) 55%, var(--bg-dark-2) 100%);
+      color:#fff;
+    }
+
+    .container{
+      width:100%;
+      max-width:480px;
+      background:rgba(255,255,255,0.97);
+      border-radius:14px;
+      box-shadow:0 14px 36px rgba(0,0,0,0.45);
+      padding:26px 22px;
+      text-align:center;
+      color:var(--text);
+    }
+
+    /* Headline */
+    .headline{
+      margin-top:10px;   /* push down a bit */
+      margin-bottom:10px;
+      font-weight:800;
+      font-size:22px;
+      color:var(--brand);
+    }
+    .subline{
+      color:#333;
+      font-size:14px;
+      line-height:1.5;
+      margin-bottom:18px;
+    }
+
+    h2{
+      color:var(--brand);
+      font-size:20px;
+      margin:14px 0 16px;
+      font-weight:700;
+    }
+
+    /* Form */
+    form input{
+      width:100%;
+      padding:12px;
+      margin:9px 0;
+      border:1px solid #dcdcdc;
+      border-radius:8px;
+      font-size:14px;
+      outline:none;
+      transition: box-shadow .15s, border-color .15s;
+    }
+    form input:focus{
+      border-color:var(--brand);
+      box-shadow:0 0 0 3px rgba(255,106,0,0.18);
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      margin-top:6px;
+      border:none;
+      border-radius:8px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:800;
+      font-size:16px;
+      cursor:pointer;
+      transition: transform .05s, background .2s;
+    }
+    button:hover{ background:var(--brand-strong); }
+    button:active{ transform:translateY(1px); }
+
+    .coupon-link{
+      margin-top:12px;
+      font-size:14px;
+      color:#444;
+    }
+    .coupon-link a{
+      color:var(--brand);
+      text-decoration:none;
+      font-weight:800;
+    }
+    .coupon-link a:hover{ text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Headline -->
+    <div class="headline">⚡ Magnus – Trusted source for wealth creation</div>
+    <div class="subline">
+      Start Your Journey to Financial Freedom.<br>
+      Magnus is a social media monetization platform that lets you turn your online presence into a steady income stream.
+    </div>
+
+    <!-- Form -->
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+      <input type="text" name="username" placeholder="Username" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" id="coupon" name="coupon" placeholder="Coupon Code" required />
+      <button type="submit">Submit</button>
+
+      <div class="coupon-link">
+        Don’t have a Coupon Code?
+        <a href="coupon.html">Get one</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Validate coupon and redirect to congratulations page
+    function validateCoupon(event){
+      event.preventDefault();
+
+      const coupon = document.getElementById("coupon").value.trim().toUpperCase();
+
+      // Working vendor codes
+      const validCoupons = [
+        "MAGNUS123","MAGNUS2025","MAGNUSVIP",
+        "DIVE100","DIVE200","DIVE2025","DIVEVIP",
+        "CHIZZY100","CHIZZY200","CHIZZY2025","CHIZZYVIP"
+      ];
+
+      if (validCoupons.includes(coupon)){
+        alert("✅ Coupon accepted. Welcome to Magnus!");
+        window.location.href = "congratulations.html";
+      } else {
+        alert("❌ Invalid coupon code. Please get a valid one from a Magnus vendor.");
+      }
+    }
+
+    document.getElementById("signupForm").addEventListener("submit", validateCoupon);
+  </script>
+</body>
+</html>

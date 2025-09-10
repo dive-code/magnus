@@ -1,180 +1,110 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnus – Sign Up</title>
+  <title>Magnus – Welcome</title>
   <style>
-    :root {
-      --brand: #ff6a00;
-      --brand-strong: #e65c00;
-      --card-bg: #ffffff;
-      --muted: #666;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 24px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      background: var(--brand);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: bold;
-      margin-right: 12px;
-      flex-shrink: 0;
-    }
-
-    .header-text h1 {
       margin: 0;
-      font-size: 1.1rem;
-      color: var(--brand-strong);
-    }
-
-    .header-text p {
-      margin: 4px 0 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      font-size: 0.85rem;
-      margin-bottom: 4px;
-      color: #333;
-    }
-
-    input {
-      padding: 12px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 100%;
-      box-sizing: border-box;
-      transition: border 0.2s ease;
-    }
-
-    input:focus {
-      border-color: var(--brand);
-      outline: none;
-    }
-
-    button {
-      background: var(--brand);
+      padding: 0;
+      background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
       color: #fff;
-      padding: 14px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s ease;
-      margin-top: 8px;
-    }
-
-    button:hover {
-      background: var(--brand-strong);
-    }
-
-    .coupon-link {
       text-align: center;
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: var(--muted);
+      line-height: 1.6;
     }
 
-    .coupon-link a {
-      color: var(--brand-strong);
-      text-decoration: none;
+    header {
+      padding: 20px;
+    }
+
+    header img {
+      width: 150px;
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 20px;
+    }
+
+    .hero img {
+      width: 80%;
+      max-width: 420px;
+      border-radius: 12px;
+      margin: 15px 0;
+    }
+
+    h1 {
+      color: #ff6a00;
+      font-size: 2.2em;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      font-size: 1.15em;
+      color: #ccc;
+      margin-bottom: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .highlight {
+      color: #ff6a00;
       font-weight: bold;
     }
 
-    .coupon-link a:hover {
-      text-decoration: underline;
+    .cta a {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #ff6a00;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #e65c00;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <div class="logo">M</div>
-      <div class="header-text">
-        <h1>⚡ Magnus – Trusted source for wealth creation</h1>
-        <p>Start Your Journey to Financial Freedom. Magnus lets you turn your online presence into a steady income stream.</p>
-      </div>
-    </div>
+  <header>
+    <img src="magnus1.jpeg" alt="Magnus Logo">
+  </header>
 
-    <form id="signupForm">
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
-
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="your_username" required>
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-      <label for="coupon">Coupon Code</label>
-      <input type="text" id="coupon" name="coupon" placeholder="Enter coupon code" required>
-
-      <button type="submit">Sign Up</button>
-    </form>
-
-    <div class="coupon-link">
-      Don’t have a coupon? <a href="coupon.html">Get one</a>
-    </div>
+  <div class="hero">
+    <img src="magnus2.jpeg" alt="Magnus Wealth Illustration">
   </div>
 
-  <script>
-    const form = document.getElementById("signupForm");
-    const validCoupons = ["MAGNUS100", "MAGNUS200"]; // ✅ Only these work
+  <h1>Welcome to Magnus</h1>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const coupon = document.getElementById("coupon").value.trim();
+  <p>
+    <span class="highlight">Magnus</span> is your trusted partner in financial growth.  
+    We believe wealth creation is not about luck — it’s about making smart moves, consistently.  
+  </p>
 
-      if (!validCoupons.includes(coupon)) {
-        alert("❌ Invalid coupon code. Please enter a valid one.");
-        return;
-      }
+  <p>
+    ✅ <span class="highlight">Get started in minutes</span>, earn rewards for years.  
+    <br>✅ Money works best when it works for you.  
+    <br>✅ Every successful journey begins with one bold decision.  
+  </p>
 
-      // ✅ Redirect to congratulations page
-      window.location.href = "congratulations.html";
-    });
-  </script>
+  <p>
+    <em>“The secret of getting ahead is getting started.”</em>  
+    <br> At Magnus, we help you take that first step toward building a life of freedom, stability, and abundance.  
+  </p>
+
+  <p>
+    🚀 Join thousands of achievers who are already turning their dreams into reality.  
+    <br> 💡 Your time is now — tomorrow is built by what you do today.  
+  </p>
+
+  <div class="cta">
+    <a href="index.html">Register Now</a>
+  </div>
 </body>
 </html>
